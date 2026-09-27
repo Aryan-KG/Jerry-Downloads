@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jerry — The Desktop Workspace for Autonomous AI Agents</title>
+  <meta name="description" content="Jerry is a private, local-first desktop application for running a team of autonomous AI agents with your own API keys, computer control, and app integrations.">
+  <link rel="canonical" href="https://jerry-boo0.onrender.com/">
+  <meta property="og:title" content="Jerry — The Desktop Workspace for Autonomous AI Agents">
+  <meta property="og:description" content="Jerry is a private, local-first desktop application for running a team of autonomous AI agents with your own API keys, computer control, and app integrations.">
+  <meta property="og:url" content="https://jerry-boo0.onrender.com/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/landing.css">
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <header class="site-nav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">
+        <img src="assets/logo.svg" alt="Jerry Logo" width="26" height="26">
+        <span>Jerry</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html" class="active">Overview</a></li>
+          <li><a href="docs.html#bring-your-own-api">API Setup</a></li>
+          <li><a href="docs.html#computer-use">Computer Use</a></li>
+          <li><a href="docs.html">Documentation</a></li>
+          <li><a href="#editions">Editions</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#downloads" class="btn-primary" id="nav-download-btn">Download</a>
+        <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Toggle navigation">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-mascot">
+        <img src="assets/logo.svg" alt="Jerry Mascot" width="72" height="72">
+      </div>
+
+      <h1 class="hero-title">The desktop workspace for autonomous AI agents.</h1>
+      
+      <p class="hero-subtitle">
+        Run Claude, OpenAI, Groq, or local models directly on your computer. Give bots isolated folders, app access, and the ability to operate your desktop safely.
+      </p>
+
+      <div class="hero-cta-group">
+        <div class="download-dropdown-wrapper">
+          <a href="#downloads" class="btn-primary btn-download-main" id="primary-download-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span id="download-label">Download for macOS</span>
+          </a>
+        </div>
+
+        <div class="download-options-pill">
+          <span id="download-sub">Universal DMG (Apple Silicon & Intel) • macOS 12+</span>
+          <span>•</span>
+          <a href="#downloads">All platforms</a>
+        </div>
+
+        <div class="quick-indicator-pill">
+          <span class="indicator-dot"></span>
+          <span>Local-first architecture • Bring your own API key • Zero telemetry</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Preview (Ollama Terminal Mockup Card) -->
+    <section class="preview-section">
+      <div class="terminal-card-large">
+        <div class="terminal-header">
+          <div class="traffic-light traffic-red"></div>
+          <div class="traffic-light traffic-yellow"></div>
+          <div class="traffic-light traffic-green"></div>
+          <span style="font-size:12px; color:var(--color-mute); margin-left:8px;">Jerry Agent Terminal — Isolated Workspace</span>
+        </div>
+        <div class="terminal-body">
+          <div class="t-prompt">$ jerry init --workspace ./product-team</div>
+          <div class="t-output t-success">✓ Desktop harness initialized. Local engine bound to 127.0.0.1.</div>
+          <div class="t-output">✓ Secure keystore unlocked. Loaded 3 active bots: <span class="t-highlight">Bramble</span> (Research), <span class="t-highlight">Nova</span> (Operations), <span class="t-highlight">Forge</span> (Code).</div>
+          <div class="t-output">✓ Connected integrations: Gmail, Slack, GitHub, Browser Controller.</div>
+          
+          <div class="t-bubble">
+            <strong>Bramble:</strong> "Good morning! I finished analyzing the competitor market reports in <code>./product-team/briefings</code>. I drafted summary email updates in your Gmail outbox for your approval before sending."
+          </div>
+
+          <div class="t-prompt">$ jerry run "Review GitHub PR notifications, summarize urgent issues, and take a screenshot of the staging deployment"</div>
+          <div class="t-output">➜ Requesting approval: <span class="t-highlight">View Screen & Open Staging URL</span> [Approved by user]</div>
+          <div class="t-output t-success">✓ Task complete. Report saved to ./product-team/daily-briefing.md.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Capabilities ("Automate your work") -->
+    <section class="features-section">
+      <div class="section-header">
+        <h2 class="section-title">Automate your work with real tools.</h2>
+        <p class="section-desc">Every agent in Jerry runs with real capabilities, distinct memory, and explicit permission gates.</p>
+      </div>
+
+      <div class="grid-3-col">
+        <div class="feature-box">
+          <div class="feature-icon-badge">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"></path>
+            </svg>
+          </div>
+          <h3>Bring Your Own API</h3>
+          <p>Plug in your own OpenAI, Anthropic, Groq, or OpenRouter keys. Or connect directly to local models running in Ollama, LM Studio, or vLLM with zero subscription markups.</p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon-badge">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+          </div>
+          <h3>Computer & Browser Control</h3>
+          <p>Agents can view designated windows or full screens, navigate browsers, click buttons, and enter text. You choose whether they ask permission before each action or run in full-auto.</p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon-badge">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+            </svg>
+          </div>
+          <h3>100+ Connected Apps</h3>
+          <p>Authorize Gmail, Slack, GitHub, Notion, Google Calendar, and web search with one click. Your agents read notifications, manage spreadsheets, and draft correspondence effortlessly.</p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon-badge">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </div>
+          <h3>Scheduled Routines</h3>
+          <p>Configure automated cron schedules. Have your research bot review industry feeds every morning at 8:00 AM, or monitor pull requests while you sleep.</p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon-badge">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+              <line x1="12" y1="18" x2="12.01" y2="18"></line>
+            </svg>
+          </div>
+          <h3>Mobile Companion</h3>
+          <p>Pair your mobile device via encrypted peer-to-peer sync. Chat with your desktop bots, grant action approvals, and receive status notifications anywhere on your private network.</p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon-badge">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+            </svg>
+          </div>
+          <h3>Isolated Working Folders</h3>
+          <p>Each bot has an assigned folder boundary. They can read, edit, analyze, and generate project files safely without touching files outside their designated perimeter.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Data Privacy Guarantee Card -->
+    <section class="guarantee-section">
+      <div class="guarantee-card">
+        <div class="guarantee-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+        </div>
+        <div class="guarantee-content">
+          <h3>Your data stays on your machine.</h3>
+          <p>
+            Jerry operates entirely on your local hardware. Conversation transcripts, bot memories, and configuration files are written directly to your local SSD. No remote server reads your prompts, and no telemetry tracks your workflows.
+          </p>
+          <div class="guarantee-badges">
+            <div class="guarantee-badge-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Local-first database
+            </div>
+            <div class="guarantee-badge-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Encrypted credential storage
+            </div>
+            <div class="guarantee-badge-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Air-gap capable
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download Platforms Section -->
+    <section class="features-section" id="downloads">
+      <div class="section-header">
+        <h2 class="section-title">Get Jerry for all your devices.</h2>
+        <p class="section-desc">Standalone desktop workstation installers and encrypted mobile companion apps. No terminal commands required.</p>
+      </div>
+
+      <div style="margin-bottom: 16px; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-charcoal);">
+        Desktop Workstations
+      </div>
+      <div class="grid-3-col" style="margin-bottom: var(--spacing-xxl);">
+        <div class="feature-box" id="downloads-mac">
+          <h3>macOS</h3>
+          <p>Universal installer signed and notarized for Apple Silicon (M1/M2/M3/M4) and Intel Macs.</p>
+          <div style="margin-top:auto; padding-top:16px;">
+            <a href="https://github.com/Aryan-KG/Jerry-Downloads/releases/download/v0.1.86/Jerry-0.1.86-arm64.dmg" class="btn-primary" style="width:100%;">Download .DMG</a>
+            <div style="font-size:12px; color:var(--color-mute); margin-top:8px; text-align:center;">macOS 12 Monterey or newer</div>
+          </div>
+        </div>
+
+        <div class="feature-box" id="downloads-win">
+          <h3>Windows</h3>
+          <p>Standalone one-click executable installer for 64-bit Windows PCs and workstations.</p>
+          <div style="margin-top:auto; padding-top:16px;">
+            <a href="https://github.com/Aryan-KG/Jerry-Downloads/releases/download/v0.1.86/Jerry-0.1.86-x64.exe" class="btn-primary" style="width:100%;">Download .EXE</a>
+            <div style="font-size:12px; color:var(--color-mute); margin-top:8px; text-align:center;">Windows 10 / 11 64-bit</div>
+          </div>
+        </div>
+
+        <div class="feature-box" id="downloads-linux">
+          <h3>Linux</h3>
+          <p>Native Debian/Ubuntu package (.deb) or universal portable AppImage distribution.</p>
+          <div style="margin-top:auto; padding-top:16px; display:flex; flex-direction:column; gap:8px;">
+            <a href="https://github.com/Aryan-KG/Jerry-Downloads/releases/download/v0.1.86/Jerry-0.1.86-amd64.deb" class="btn-primary" style="width:100%;">Download .DEB</a>
+            <a href="https://github.com/Aryan-KG/Jerry-Downloads/releases/download/v0.1.86/Jerry-0.1.86-x86_64.AppImage" class="btn-secondary" style="width:100%; text-align:center;">Download .AppImage</a>
+            <div style="font-size:12px; color:var(--color-mute); margin-top:4px; text-align:center;">Ubuntu 22.04+ / Debian 12+</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-bottom: 16px; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-charcoal);">
+        Mobile Companion Apps
+      </div>
+      <div class="grid-2-col">
+        <div class="feature-box" id="downloads-ios">
+          <div style="display:flex; align-items:center; justify-content:space-between;">
+            <h3>iOS Companion</h3>
+            <span style="font-size:12px; background:var(--color-surface-soft); padding:3px 10px; border-radius:var(--radius-full); border:1px solid var(--color-hairline);">iPhone & iPad</span>
+          </div>
+          <p>Native Swift/SwiftUI companion. Approve desktop actions remotely, chat with streaming threads, and share links directly from the iOS Share Sheet.</p>
+          <div style="margin-top:auto; padding-top:16px; display:flex; flex-direction:column; gap:8px;">
+            <a href="https://github.com/Aryan-KG/Jerry-Downloads/releases/download/v0.1.86/Jerry-Companion.ipa" class="btn-primary" style="width:100%;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                <line x1="12" y1="18" x2="12.01" y2="18"></line>
+              </svg>
+              Download for iOS (.IPA)
+            </a>
+            <div style="font-size:12px; color:var(--color-mute); text-align:center;">iOS 17+ • CryptoKit End-to-End Encryption</div>
+          </div>
+        </div>
+
+        <div class="feature-box" id="downloads-android">
+          <div style="display:flex; align-items:center; justify-content:space-between;">
+            <h3>Android Companion</h3>
+            <span style="font-size:12px; background:var(--color-surface-soft); padding:3px 10px; border-radius:var(--radius-full); border:1px solid var(--color-hairline);">Phone & Tablet</span>
+          </div>
+          <p>Jetpack Compose native client. Pair with your desktop instantly via QR code to review tasks, triage approvals, and continue conversations on mobile.</p>
+          <div style="margin-top:auto; padding-top:16px; display:flex; flex-direction:column; gap:8px;">
+            <a href="https://github.com/Aryan-KG/Jerry-Downloads/releases/download/v0.1.86/Jerry-Companion.apk" class="btn-primary" style="width:100%;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              Download Android (.APK)
+            </a>
+            <div style="font-size:12px; color:var(--color-mute); text-align:center;">Android 8.0+ • QR Pairing</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Editions / Pricing Grid -->
+    <section class="editions-section" id="editions">
+      <div class="section-header">
+        <h2 class="section-title">Start personal. Scale organizational.</h2>
+        <p class="section-desc">Straightforward licensing for personal power-users, teams, and air-gapped enterprises.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Community / Personal Card -->
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <div class="pricing-tier">Personal</div>
+            <div class="pricing-sub">Full desktop workstation for individual users</div>
+            <div class="pricing-price">$0 <span>forever</span></div>
+          </div>
+
+          <ul class="pricing-features">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Unlimited local bots & instructions
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Bring your own API keys (all providers)
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Full desktop & browser computer use
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Scheduled cron routines & automations
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              100% local database storage
+            </li>
+          </ul>
+
+          <a href="#downloads" class="btn-secondary" style="width:100%; text-align:center;">Download Free</a>
+        </div>
+
+        <!-- Pro / Teams Card -->
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <div class="pricing-tier">Pro</div>
+            <div class="pricing-sub">For professionals managing multi-device agent setups</div>
+            <div class="pricing-price">$19 <span>/ month</span></div>
+          </div>
+
+          <ul class="pricing-features">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Everything in Personal
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Encrypted Multi-Device Companion sync
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              On-device voice transcription & dictation
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Automated remote cloud container sandboxes
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Priority email support
+            </li>
+          </ul>
+
+          <a href="https://checkout.dodopayments.com/buy/pdt_0NoFfIRyOlwFNMBHDwpQ1" target="_blank" rel="noopener noreferrer" class="btn-primary" style="width:100%; text-align:center;">Get Pro License</a>
+        </div>
+
+        <!-- Enterprise Inverted Dark Card -->
+        <div class="pricing-card-dark">
+          <div class="pricing-header">
+            <div class="pricing-tier">Enterprise</div>
+            <div class="pricing-sub">Air-gapped security, central policy, & SSO</div>
+            <div class="pricing-price">Custom</div>
+          </div>
+
+          <ul class="pricing-features">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Strict air-gapped / offline deployments
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Centralized security & approval policy controls
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              SAML 2.0 / Okta / Azure AD single sign-on
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Custom corporate LLM gateway enforcement
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Dedicated deployment engineer & SLA
+            </li>
+          </ul>
+
+          <a href="mailto:sales@jerry.ai" class="btn-primary btn-pill-dark" style="width:100%; text-align:center;">Contact Sales</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <div class="section-header">
+        <h2 class="section-title">Frequently asked questions.</h2>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Do I need to pay for an extra subscription to run Jerry?</span>
+            <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            No. The core Jerry desktop app is completely free. You can bring your own existing API keys (from OpenAI, Anthropic, Groq, etc.) or connect to free local models running on your machine via Ollama or LM Studio. You only pay your AI provider for what you use.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Can Jerry work completely offline?</span>
+            <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            Yes. When connected to a local inference provider like Ollama (e.g. running Llama 3, Qwen, or Mistral on <code>http://127.0.0.1:11434/v1</code>), Jerry operates without any internet access required.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How does computer control work safely?</span>
+            <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            By default, Jerry runs with an explicit "Approval Gate". Whenever an agent requests to click your screen, type a keyboard sequence, or open an application, an interactive approval prompt appears for your confirmation. You can also run inside isolated virtual sandboxes.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Where is my data and bot memory stored?</span>
+            <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            All data is saved locally in your user profile under <code>~/.openmausbot</code> (or <code>%USERPROFILE%\.openmausbot</code> on Windows). Your API keys are encrypted using your operating system's native keychain.
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-links-row">
+        <div class="footer-links">
+          <a href="#downloads">Download</a>
+          <a href="docs.html">Documentation</a>
+          <a href="docs.html#bring-your-own-api">API Setup</a>
+          <a href="docs.html#computer-use">Computer Use</a>
+          <a href="docs.html#privacy-and-storage">Privacy & Data</a>
+          <a href="docs.html#faq">Troubleshooting</a>
+        </div>
+        <div class="footer-copy">
+          © 2026 Jerry Technologies. All rights reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

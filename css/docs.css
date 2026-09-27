@@ -1,0 +1,386 @@
+/* ==========================================================================
+   Documentation Portal Styles (Clean, Paper-White, Ollama Minimalist)
+   ========================================================================== */
+
+.docs-layout {
+  display: flex;
+  min-height: calc(100vh - 60px);
+  max-width: var(--container-wide);
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Sidebar Navigation */
+.docs-sidebar {
+  width: 260px;
+  flex-shrink: 0;
+  border-right: 1px solid var(--color-hairline);
+  padding: var(--spacing-xl) var(--spacing-lg) var(--spacing-section) 0;
+  position: sticky;
+  top: 60px;
+  height: calc(100vh - 60px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-hairline-strong) transparent;
+}
+
+.docs-search-wrapper {
+  margin-bottom: var(--spacing-xl);
+  padding-right: var(--spacing-sm);
+}
+
+.docs-search-input {
+  width: 100%;
+  height: 36px;
+  background-color: var(--color-surface-soft);
+  color: var(--color-ink);
+  font-size: 13.5px;
+  padding: 8px 14px 8px 34px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-hairline);
+  outline: none;
+  transition: all 0.15s ease;
+}
+
+.docs-search-input:focus {
+  background-color: var(--color-canvas);
+  border-color: var(--color-hairline-strong);
+  box-shadow: 0 0 0 3px var(--color-focus-ring);
+}
+
+.docs-nav-group {
+  margin-bottom: var(--spacing-lg);
+}
+
+.docs-group-title {
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-charcoal);
+  margin-bottom: var(--spacing-xs);
+  padding-left: var(--spacing-sm);
+}
+
+.docs-nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.docs-nav-link {
+  display: block;
+  font-size: 13.5px;
+  color: var(--color-body);
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+  transition: all 0.15s ease;
+  line-height: 1.4;
+}
+
+.docs-nav-link:hover {
+  color: var(--color-ink);
+  background-color: var(--color-surface-soft);
+}
+
+.docs-nav-link.active {
+  color: var(--color-ink);
+  background-color: var(--color-surface-soft);
+  font-weight: 600;
+}
+
+/* Documentation Content Area */
+.docs-content {
+  flex-grow: 1;
+  padding: var(--spacing-xxl) 0 var(--spacing-section) var(--spacing-xxl);
+  max-width: var(--container-reading);
+}
+
+.docs-breadcrumb {
+  font-size: 13px;
+  color: var(--color-mute);
+  margin-bottom: var(--spacing-lg);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.docs-breadcrumb span {
+  color: var(--color-body);
+}
+
+.doc-section {
+  display: none;
+}
+
+.doc-section.active-doc {
+  display: block;
+}
+
+.doc-header {
+  margin-bottom: var(--spacing-xl);
+  padding-bottom: var(--spacing-lg);
+  border-bottom: 1px solid var(--color-hairline);
+}
+
+.doc-title {
+  font-family: var(--font-heading);
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--color-ink);
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+  margin-bottom: var(--spacing-sm);
+}
+
+.doc-lead {
+  font-size: 17px;
+  color: var(--color-body);
+  line-height: 1.5;
+}
+
+/* Article Typography */
+.doc-body h2 {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--color-ink);
+  letter-spacing: -0.01em;
+  margin-top: calc(var(--spacing-section) * 0.5);
+  margin-bottom: var(--spacing-md);
+}
+
+.doc-body h3 {
+  font-family: var(--font-heading);
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--color-ink);
+  margin-top: var(--spacing-xl);
+  margin-bottom: var(--spacing-sm);
+}
+
+.doc-body p {
+  font-size: 15.5px;
+  line-height: 1.65;
+  color: var(--color-charcoal);
+  margin-bottom: var(--spacing-lg);
+}
+
+.doc-body ul, .doc-body ol {
+  margin-bottom: var(--spacing-lg);
+  padding-left: var(--spacing-xl);
+}
+
+.doc-body li {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-charcoal);
+  margin-bottom: var(--spacing-xs);
+}
+
+.doc-body code:not(pre code) {
+  font-family: var(--font-mono);
+  font-size: 13.5px;
+  background-color: var(--color-surface-soft);
+  border: 1px solid var(--color-hairline);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  color: var(--color-ink);
+}
+
+/* Code Snippets */
+.code-block {
+  background-color: var(--color-surface-soft);
+  border: 1px solid var(--color-hairline);
+  border-radius: var(--radius-lg);
+  margin: var(--spacing-lg) 0 var(--spacing-xl);
+  overflow: hidden;
+}
+
+.code-block-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid var(--color-hairline);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--color-charcoal);
+}
+
+.code-block pre {
+  padding: var(--spacing-md) var(--spacing-lg);
+  overflow-x: auto;
+  font-family: var(--font-mono);
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--color-ink);
+}
+
+.btn-code-copy {
+  background: none;
+  border: none;
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--color-body);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  transition: all 0.15s ease;
+}
+
+.btn-code-copy:hover {
+  color: var(--color-ink);
+  background-color: var(--color-hairline);
+}
+
+/* Callout Cards */
+.callout {
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-md) var(--spacing-lg);
+  margin: var(--spacing-lg) 0;
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: flex-start;
+  font-size: 14.5px;
+  line-height: 1.55;
+}
+
+.callout-note {
+  background-color: var(--color-surface-soft);
+  border: 1px solid var(--color-hairline);
+  color: var(--color-charcoal);
+}
+
+.callout-important {
+  background-color: #fafafa;
+  border: 1px solid #d4d4d4;
+  color: var(--color-ink);
+}
+
+.callout-icon {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Step cards */
+.step-row {
+  display: flex;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.step-num {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-ink);
+  color: var(--color-on-primary);
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.step-text {
+  flex-grow: 1;
+}
+
+.step-text h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-ink);
+  margin-bottom: 4px;
+}
+
+/* Documentation Tables */
+.doc-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--spacing-lg) 0 var(--spacing-xl);
+  font-size: 14px;
+}
+
+.doc-table th, .doc-table td {
+  padding: 10px 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--color-hairline);
+}
+
+.doc-table th {
+  font-weight: 600;
+  color: var(--color-ink);
+  background-color: var(--color-surface-soft);
+  border-top: 1px solid var(--color-hairline);
+}
+
+.doc-table td {
+  color: var(--color-charcoal);
+  vertical-align: top;
+}
+
+/* Search Results Overlay */
+.search-results-panel {
+  display: none;
+  background-color: var(--color-canvas);
+  border: 1px solid var(--color-hairline-strong);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+.search-results-panel.open {
+  display: block;
+}
+
+.search-result-item {
+  display: block;
+  padding: 8px 12px;
+  border-radius: var(--radius-md);
+  transition: background-color 0.15s ease;
+  margin-bottom: 4px;
+}
+
+.search-result-item:hover {
+  background-color: var(--color-surface-soft);
+}
+
+.search-result-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.search-result-snippet {
+  font-size: 12.5px;
+  color: var(--color-body);
+  margin-top: 2px;
+}
+
+/* Responsive Docs */
+@media (max-width: 850px) {
+  .docs-layout {
+    flex-direction: column;
+    padding: 0 var(--spacing-xl);
+  }
+  .docs-sidebar {
+    width: 100%;
+    height: auto;
+    position: static;
+    border-right: none;
+    border-bottom: 1px solid var(--color-hairline);
+    padding: var(--spacing-lg) 0;
+  }
+  .docs-content {
+    padding: var(--spacing-xl) 0;
+  }
+}

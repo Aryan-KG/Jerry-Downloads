@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentation — Jerry User Guide</title>
+  <meta name="description" content="Complete user guide for Jerry Desktop: installation, connecting your own API keys, creating bots, computer use, and app integrations.">
+  <link rel="canonical" href="https://jerry-boo0.onrender.com/docs.html">
+  <meta property="og:title" content="Documentation — Jerry User Guide">
+  <meta property="og:description" content="Complete user guide for Jerry Desktop: installation, connecting your own API keys, creating bots, computer use, and app integrations.">
+  <meta property="og:url" content="https://jerry-boo0.onrender.com/docs.html">
+  <meta property="og:type" content="article">
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/docs.css">
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <header class="site-nav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">
+        <img src="assets/logo.svg" alt="Jerry Logo" width="26" height="26">
+        <span>Jerry <span style="font-weight:400; color:var(--color-mute); font-size:14px; margin-left:4px;">Docs</span></span>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Overview</a></li>
+          <li><a href="#installation" class="docs-nav-link-top">Installation</a></li>
+          <li><a href="#bring-your-own-api" class="docs-nav-link-top">API Setup</a></li>
+          <li><a href="#computer-use" class="docs-nav-link-top">Computer Use</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="index.html#downloads" class="btn-primary">Download App</a>
+        <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Toggle navigation">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Docs Main Layout -->
+  <div class="docs-layout">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="docs-sidebar">
+      <div class="docs-search-wrapper">
+        <div class="search-pill-container">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="docs-search-input" class="docs-search-input" placeholder="Search guides..." autocomplete="off">
+        </div>
+        <div id="search-results-panel" class="search-results-panel"></div>
+      </div>
+
+      <nav>
+        <div class="docs-nav-group">
+          <div class="docs-group-title">Getting Started</div>
+          <ul class="docs-nav-list">
+            <li><a href="#installation" class="docs-nav-link active">Installation & Setup</a></li>
+            <li><a href="#bring-your-own-api" class="docs-nav-link">AI Providers & Custom APIs</a></li>
+            <li><a href="#bots-and-instructions" class="docs-nav-link">Creating & Managing Bots</a></li>
+          </ul>
+        </div>
+
+        <div class="docs-nav-group">
+          <div class="docs-group-title">Capabilities</div>
+          <ul class="docs-nav-list">
+            <li><a href="#connected-apps" class="docs-nav-link">Connected Apps & Tools</a></li>
+            <li><a href="#computer-use" class="docs-nav-link">Computer & Browser Control</a></li>
+            <li><a href="#automations" class="docs-nav-link">Scheduled Routines</a></li>
+            <li><a href="#mobile-companion" class="docs-nav-link">Mobile Companion Mode</a></li>
+          </ul>
+        </div>
+
+        <div class="docs-nav-group">
+          <div class="docs-group-title">System & Security</div>
+          <ul class="docs-nav-list">
+            <li><a href="#privacy-and-storage" class="docs-nav-link">Privacy, Storage & Backups</a></li>
+            <li><a href="#faq" class="docs-nav-link">Troubleshooting & FAQs</a></li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- Content Reading Area -->
+    <main class="docs-content">
+      
+      <div class="docs-breadcrumb">
+        <a href="index.html">Jerry</a>
+        <span>/</span>
+        <a href="docs.html">Docs</a>
+        <span>/</span>
+        <span id="breadcrumb-current">Installation & Setup</span>
+      </div>
+
+      <!-- SECTION 1: Installation & Setup -->
+      <article id="installation" class="doc-section active-doc">
+        <header class="doc-header">
+          <h1 class="doc-title">Installation & Setup</h1>
+          <p class="doc-lead">
+            Jerry is delivered as a standalone desktop binary. The backend harness is completely embedded inside the app, so you do not need terminal servers or background daemons.
+          </p>
+        </header>
+
+        <div class="doc-body">
+          <h2>Installing on macOS</h2>
+          <p>Jerry is available for both Apple Silicon (M1/M2/M3/M4) and Intel-based Macs running macOS 12 Monterey or later.</p>
+
+          <div class="step-row">
+            <div class="step-num">1</div>
+            <div class="step-text">
+              <h4>Download the Universal DMG</h4>
+              <p>Download the latest <code>Jerry.dmg</code> from the downloads section.</p>
+            </div>
+          </div>
+
+          <div class="step-row">
+            <div class="step-num">2</div>
+            <div class="step-text">
+              <h4>Install to Applications</h4>
+              <p>Double-click the downloaded <code>Jerry.dmg</code> file, then drag the Jerry icon into your <code>Applications</code> folder.</p>
+            </div>
+          </div>
+
+          <div class="step-row">
+            <div class="step-num">3</div>
+            <div class="step-text">
+              <h4>Grant System Permissions (For Computer Use)</h4>
+              <p>
+                When you launch Jerry, macOS will prompt you for two standard automation permissions if you choose to enable desktop computer control:
+              </p>
+              <ul>
+                <li><strong>Accessibility:</strong> Enables your bots to move the cursor, click buttons, and enter text in designated tasks.</li>
+                <li><strong>Screen Recording:</strong> Enables your bots to capture visual screenshots of your designated window or screen to see what they are operating.</li>
+              </ul>
+              <p>You can verify these at any time in <strong>System Settings → Privacy & Security</strong>.</p>
+            </div>
+          </div>
+
+          <h2>Installing on Windows</h2>
+          <p>Jerry supports 64-bit editions of Windows 10 and Windows 11.</p>
+          <div class="step-row">
+            <div class="step-num">1</div>
+            <div class="step-text">
+              <h4>Run Jerry-Setup.exe</h4>
+              <p>Download and run the installer. Jerry installs per-user and does not require administrative privileges.</p>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-num">2</div>
+            <div class="step-text">
+              <h4>SmartScreen Notice</h4>
+              <p>If Windows SmartScreen displays a warning, click <strong>More info → Run anyway</strong> to complete the launch.</p>
+            </div>
+          </div>
+
+          <h2>Installing on Linux</h2>
+          <p>Jerry provides official packages for Ubuntu 22.04+ / Debian 12+, as well as a universal AppImage.</p>
+          <div class="code-block">
+            <div class="code-block-header">
+              <span>Terminal — Ubuntu / Debian Package</span>
+              <button class="btn-code-copy">Copy</button>
+            </div>
+            <pre><code>sudo apt install ./jerry-desktop_amd64.deb</code></pre>
+          </div>
+          <p>Or for the AppImage: right-click the file, enable <em>Allow executing file as program</em>, and double-click to launch.</p>
+
+          <div class="callout callout-note">
+            <div class="callout-icon">ℹ️</div>
+            <div>
+              <strong>No Separate Server Required:</strong> When running the desktop application, all communication happens locally within the embedded client. Your bots start running immediately upon opening the app.
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- SECTION 2: AI Providers & Bringing Your Own API Key -->
+      <article id="bring-your-own-api" class="doc-section">
+        <header class="doc-header">
+          <h1 class="doc-title">AI Providers & Custom APIs</h1>
+          <p class="doc-lead">
+            Jerry operates on a transparent "Bring Your Own Key" (BYOK) architecture. You can connect your favorite cloud AI provider or run free local models on your own machine.
+          </p>
+        </header>
+
+        <div class="doc-body">
+          <h2>Configuring Cloud Providers in the App</h2>
+          <p>To configure your API keys in Jerry:</p>
+          <ol>
+            <li>Click the <strong>Settings</strong> icon (gear icon) in the bottom-left corner of the sidebar.</li>
+            <li>Select the <strong>Connections</strong> tab.</li>
+            <li>Paste your key into the corresponding provider field and click <strong>Test Key</strong> to confirm the connection.</li>
+          </ol>
+
+          <table class="doc-table">
+            <thead>
+              <tr>
+                <th>Provider</th>
+                <th>Supported Models</th>
+                <th>Where to Get Key</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Anthropic</strong></td>
+                <td>Claude 3.7 Sonnet, Claude 3.5 Haiku, Claude 3 Opus</td>
+                <td>Anthropic Console (console.anthropic.com)</td>
+              </tr>
+              <tr>
+                <td><strong>xAI (Grok)</strong></td>
+                <td>Grok 2, Grok Vision, Grok 3</td>
+                <td>xAI Console (console.x.ai)</td>
+              </tr>
+              <tr>
+                <td><strong>OpenAI-Compatible</strong></td>
+                <td>GPT-4o, o3-mini, Llama 3.3, DeepSeek-R1, Mistral</td>
+                <td>OpenAI, OpenRouter, Groq, or Together AI</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2>Using Custom OpenAI-Compatible Endpoints</h2>
+          <p>
+            Jerry has full support for any server that speaks the OpenAI Chat Completions protocol. You can point Jerry to third-party gateways, enterprise reverse proxies, or local servers:
+          </p>
+
+          <div class="step-row">
+            <div class="step-num">1</div>
+            <div class="step-text">
+              <h4>Open Settings → Connections</h4>
+              <p>Locate the <strong>OpenAI-compatible API key</strong> row.</p>
+            </div>
+          </div>
+
+          <div class="step-row">
+            <div class="step-num">2</div>
+            <div class="step-text">
+              <h4>Set the Base URL</h4>
+              <p>Under <strong>OpenAI-compatible base URL</strong>, enter your custom endpoint:</p>
+              <ul>
+                <li><strong>Direct OpenAI:</strong> <code>https://api.openai.com/v1</code></li>
+                <li><strong>OpenRouter:</strong> <code>https://openrouter.ai/api/v1</code></li>
+                <li><strong>Groq Cloud:</strong> <code>https://api.groq.com/openai/v1</code></li>
+                <li><strong>Together AI:</strong> <code>https://api.together.xyz/v1</code></li>
+              </ul>
+            </div>
+          </div>
+
+          <h2>Connecting to Local Offline Models (Ollama / LM Studio)</h2>
+          <p>
+            To run Jerry completely private and free of cloud fees, you can connect it directly to models running locally on your hardware:
+          </p>
+
+          <h3>Using Ollama</h3>
+          <p>Start Ollama on your computer. In Jerry's <strong>Settings → Connections</strong>:</p>
+          <ul>
+            <li><strong>Base URL:</strong> <code>http://127.0.0.1:11434/v1</code></li>
+            <li><strong>API Key:</strong> Enter <code>ollama</code> (any non-empty placeholder value).</li>
+          </ul>
+
+          <h3>Using LM Studio</h3>
+          <p>In LM Studio, load your desired model and click <strong>Start Server</strong> on the Local Server tab:</p>
+          <ul>
+            <li><strong>Base URL:</strong> <code>http://127.0.0.1:1234/v1</code></li>
+            <li><strong>API Key:</strong> Enter <code>lm-studio</code>.</li>
+          </ul>
+
+          <div class="callout callout-important">
+            <div class="callout-icon">🔒</div>
+            <div>
+              <strong>Secure Local Storage:</strong> Keys entered in the Settings UI are stored securely in your operating system's native credential store. They are never sent to Jerry servers.
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- SECTION 3: Creating & Managing Bots -->
+      <article id="bots-and-instructions" class="doc-section">
+        <header class="doc-header">
+          <h1 class="doc-title">Creating & Managing Bots</h1>
+          <p class="doc-lead">
+            In Jerry, you don't just chat with a single generic assistant. You build a specialized team of bots, each with its own role, memory, and designated working directory.
+          </p>
+        </header>
+
+        <div class="doc-body">
+          <h2>Creating a New Bot</h2>
+          <p>
+            In the Jerry sidebar, click the <strong>+ New Bot</strong> button. You can configure:
+          </p>
+          <ul>
+            <li><strong>Name & Avatar:</strong> Choose a name (e.g. <em>Researcher</em>, <em>Copywriter</em>, <em>QA Inspector</em>) and select an icon or upload a custom avatar.</li>
+            <li><strong>Engine & Model:</strong> Pick which AI provider and model powers this specific bot. For example, use Claude 3.7 for deep reasoning and Grok for rapid search.</li>
+            <li><strong>Instructions (Persona Prompt):</strong> Define how the bot should behave, its tone, format preferences, and guidelines.</li>
+          </ul>
+
+          <h2>Setting an Isolated Working Folder</h2>
+          <p>
+            You can bind any bot to a specific folder on your hard drive (e.g. <code>~/Projects/Marketing</code> or <code>D:\ClientWork</code>).
+          </p>
+          <p>
+            When a working folder is assigned:
+          </p>
+          <ul>
+            <li>The bot can automatically read files, search contents, and write updates inside that directory.</li>
+            <li>The bot is sandboxed to that perimeter and cannot modify unrelated files on your system.</li>
+          </ul>
+
+          <h2>Long-Term Memory & Search</h2>
+          <p>
+            Bots retain conversation context across sessions. You can search past conversations and tasks using the search bar in the top navigation or ask the bot: <em>"What did we decide about the launch date last week?"</em>
+          </p>
+        </div>
+      </article>
+
+      <!-- SECTION 4: Connected Apps & Integrations -->
+      <article id="connected-apps" class="doc-section">
+        <header class="doc-header">
+          <h1 class="doc-title">Connected Apps & Tools</h1>
+          <p class="doc-lead">
+            Empower your bots to take real actions across your daily tools: reading emails, triaging notifications, updating spreadsheets, and managing calendar invites.
+          </p>
+        </header>
+
+        <div class="doc-body">
+          <h2>Connecting Services</h2>
+          <p>
+            Go to <strong>Settings → Connected Apps</strong>. You can connect services with a single OAuth authorization:
+          </p>
+
+          <table class="doc-table">
+            <thead>
+              <tr>
+                <th>App</th>
+                <th>Capabilities</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Gmail / Outlook</strong></td>
+                <td>Read incoming emails, summarize threads, draft reply emails for your approval.</td>
+              </tr>
+              <tr>
+                <td><strong>Slack / Discord</strong></td>
+                <td>Monitor designated channels, post status updates, notify you of mentions.</td>
+              </tr>
+              <tr>
+                <td><strong>Google Calendar</strong></td>
+                <td>Inspect free/busy blocks, schedule meetings, summarize daily itinerary.</td>
+              </tr>
+              <tr>
+                <td><strong>GitHub / GitLab</strong></td>
+                <td>Review pull requests, read repository files, summarize new issue tickets.</td>
+              </tr>
+              <tr>
+                <td><strong>Notion / Linear</strong></td>
+                <td>Create project tickets, update documents, synchronize roadmap tasks.</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2>Per-Bot Tool Authorization</h2>
+          <p>
+            You control which tools each bot has access to. In any bot's settings panel, toggle specific integrations on or off. For example, give your <em>Scheduler</em> access to Calendar and Gmail, while keeping your <em>Code Assistant</em> scoped strictly to GitHub and local files.
+          </p>
+        </div>
+      </article>
+
+      <!-- SECTION 5: Computer Use & Desktop Automation -->
+      <article id="computer-use" class="doc-section">
+        <header class="doc-header">
+          <h1 class="doc-title">Computer & Browser Control</h1>
+          <p class="doc-lead">
+            Jerry enables bots to visually perceive your desktop and operate applications, browse websites, and fill out forms just like a human collaborator.
+          </p>
+        </header>
+
+        <div class="doc-body">
+          <h2>How Computer Control Works</h2>
+          <p>
+            When a bot receives a task requiring desktop operation (e.g. <em>"Open the spreadsheet on my desktop, copy the Q3 numbers, and paste them into the web portal"</em>):
+          </p>
+          <ol>
+            <li>The bot captures a visual screenshot of your screen or active window.</li>
+            <li>The model analyzes the UI coordinates of buttons, text fields, and elements.</li>
+            <li>The bot dispatches precise mouse movements, clicks, and keystrokes to complete the steps.</li>
+          </ol>
+
+          <h2>Security & Approval Gates</h2>
+          <p>
+            Jerry puts you in full control of computer automation with two operating modes:
+          </p>
+          <ul>
+            <li>
+              <strong>Approval Required (Default):</strong> Before performing any click, keystroke, or app opening, Jerry pauses and displays an approval card showing exactly what it intends to do. The bot proceeds only when you click <em>Approve</em>.
+            </li>
+            <li>
+              <strong>Full-Auto Mode:</strong> For repetitive tasks in safe environments, you can temporarily enable full-auto. You can stop or interrupt the bot at any second by pressing <kbd>Esc</kbd> or moving your physical mouse.
+            </li>
+          </ul>
+
+          <div class="callout callout-important">
+            <div class="callout-icon">🛡️</div>
+            <div>
+              <strong>Instant Interrupt:</strong> Jiggling your hardware mouse or pressing the emergency stop button in the Jerry window instantly revokes bot control and restores manual focus.
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- SECTION 6: Scheduled Routines -->
+      <article id="automations" class="doc-section">
+        <header class="doc-header">
+          <h1 class="doc-title">Scheduled Routines & Automations</h1>
+          <p class="doc-lead">
+            Put your bots on auto-pilot. Create recurring schedules so your agents complete repetitive chores in the background.
+          </p>
+        </header>
+
+        <div class="doc-body">
+          <h2>Creating a Routine</h2>
+          <p>
+            In the Jerry navigation, select <strong>Automations → New Routine</strong>:
+          </p>
+          <ul>
+            <li><strong>Assign Bot:</strong> Choose which bot will execute the task.</li>
+            <li><strong>Task Prompt:</strong> Write the prompt (e.g. <em>"Check my Gmail inbox for high-priority client messages, summarize them in a bullet list, and post to my Daily Briefing channel"</em>).</li>
+            <li><strong>Schedule:</strong> Select frequency (Daily, Weekdays, Hourly, or custom cron expression).</li>
+          </ul>
+
+          <h2>Example Use Cases</h2>
+          <ul>
+            <li><strong>Daily 9:00 AM Morning Briefing:</strong> Reads calendar events and unread messages to prepare a clean daily action plan.</li>
+            <li><strong>Nightly Code & PR Digest:</strong> Reviews open pull requests and summarizes build test results before you wake up.</li>
+            <li><strong>Competitor Website Monitor:</strong> Checks key web pages daily and alerts you if pricing or feature matrices change.</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- SECTION 7: Mobile Companion Mode -->
+      <article id="mobile-companion" class="doc-section">
+        <header class="doc-header">
+          <h1 class="doc-title">Mobile Companion Mode</h1>
+          <p class="doc-lead">
+            Stay connected to your desktop bots while away from your desk. Review task completions and approve actions from your phone.
+          </p>
+        </header>
+
+        <div class="doc-body">
+          <h2>Download Companion Apps</h2>
+          <p>
+            The mobile companion app runs as an encrypted companion client to your desktop workstation.
+          </p>
+
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:var(--spacing-md); margin:var(--spacing-lg) 0 var(--spacing-xl);">
+            <div style="background:var(--color-surface-soft); border:1px solid var(--color-hairline); border-radius:var(--radius-lg); padding:var(--spacing-lg);">
+              <div style="font-weight:600; font-size:15px; margin-bottom:4px;">iOS Companion (iPhone & iPad)</div>
+              <p style="font-size:13px; color:var(--color-body); margin-bottom:12px;">Requires iOS 17+. Native SwiftUI with Apple Passwords autofill and iOS Share Sheet integration.</p>
+              <a href="index.html#downloads-ios" class="btn-primary" style="font-size:13px; height:34px; padding:6px 14px;">Get for iOS (.IPA / TestFlight)</a>
+            </div>
+
+            <div style="background:var(--color-surface-soft); border:1px solid var(--color-hairline); border-radius:var(--radius-lg); padding:var(--spacing-lg);">
+              <div style="font-weight:600; font-size:15px; margin-bottom:4px;">Android Companion (Phone & Tablet)</div>
+              <p style="font-size:13px; color:var(--color-body); margin-bottom:12px;">Requires Android 8.0+. Jetpack Compose UI with instant QR camera pairing.</p>
+              <a href="index.html#downloads-android" class="btn-primary" style="font-size:13px; height:34px; padding:6px 14px;">Download Android (.APK)</a>
+            </div>
+          </div>
+
+          <h2>Pairing Your Mobile Device</h2>
+          <div class="step-row">
+            <div class="step-num">1</div>
+            <div class="step-text">
+              <h4>Open Settings → Companion</h4>
+              <p>On your desktop Jerry app, click <strong>Settings (gear icon) → Companion</strong> and click <strong>Pair Mobile Device</strong> to generate a unique, time-sensitive pairing QR code.</p>
+            </div>
+          </div>
+
+          <div class="step-row">
+            <div class="step-num">2</div>
+            <div class="step-text">
+              <h4>Scan with Mobile App / Browser</h4>
+              <p>Open the companion app or your phone camera and scan the QR code. The companion client negotiates a direct end-to-end encrypted connection to your desktop machine over your local Wi-Fi or private network.</p>
+            </div>
+          </div>
+
+          <h2>Key Mobile Features</h2>
+          <ul>
+            <li><strong>Remote Approvals:</strong> Receive push notifications when an agent asks for permission to execute a task, and approve with a single tap.</li>
+            <li><strong>On-The-Go Chat:</strong> Message your desktop bots anytime and read updated research briefings.</li>
+            <li><strong>Voice Dictation:</strong> Dictate long instructions effortlessly into your phone microphone.</li>
+            <li><strong>Web Browser Fallback:</strong> If you don't have the native app installed, scanning the QR code opens a lightweight Progressive Web Companion directly in Safari or Chrome.</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- SECTION 8: Privacy, Storage & Backups -->
+      <article id="privacy-and-storage" class="doc-section">
+        <header class="doc-header">
+          <h1 class="doc-title">Privacy, Data Storage & Backups</h1>
+          <p class="doc-lead">
+            Jerry is engineered from the ground up for strict data sovereignty. Your files and conversations stay exclusively under your ownership.
+          </p>
+        </header>
+
+        <div class="doc-body">
+          <h2>Local File Locations</h2>
+          <p>
+            All configuration files, bot memories, and conversation transcripts are stored on your local disk:
+          </p>
+          <ul>
+            <li><strong>macOS & Linux:</strong> <code>~/.openmausbot/</code></li>
+            <li><strong>Windows:</strong> <code>%USERPROFILE%\.openmausbot\</code></li>
+          </ul>
+
+          <h2>Backing Up Your Workspace</h2>
+          <p>
+            To create a backup or migrate your bots to a new machine:
+          </p>
+          <ol>
+            <li>Open <strong>Settings → Backups</strong>.</li>
+            <li>Click <strong>Export Workspace Backup</strong> to save an encrypted archive of your bot personas, settings, and memory logs.</li>
+            <li>On your new computer, click <strong>Restore Backup</strong> to reinstate your workspace in seconds.</li>
+          </ol>
+
+          <h2>Zero Telemetry Policy</h2>
+          <p>
+            Jerry contains no analytics beacons, tracking cookies, or prompt snooping. Network traffic occurs only between your computer and the AI endpoints you explicitly configure.
+          </p>
+        </div>
+      </article>
+
+      <!-- SECTION 9: Troubleshooting & FAQs -->
+      <article id="faq" class="doc-section">
+        <header class="doc-header">
+          <h1 class="doc-title">Troubleshooting & FAQs</h1>
+          <p class="doc-lead">
+            Quick solutions to common questions and permission checks.
+          </p>
+        </header>
+
+        <div class="doc-body">
+          <h3>The bot is unable to click or move the mouse on macOS</h3>
+          <p>
+            Open <strong>System Settings → Privacy & Security → Accessibility</strong>. Ensure <strong>Jerry</strong> is toggled ON. If it is already ON, toggle it OFF and back ON once to refresh macOS permission tokens. Do the same under <strong>Screen Recording</strong>.
+          </p>
+
+          <h3>"Connection Refused" when using Ollama or LM Studio</h3>
+          <p>
+            Ensure your local server is actively running in the background before sending messages in Jerry:
+          </p>
+          <ul>
+            <li>For Ollama: Open your terminal and run <code>ollama serve</code> or ensure the Ollama menu bar icon is active. Test in your browser at <code>http://127.0.0.1:11434</code>.</li>
+            <li>For LM Studio: Ensure the green "Start Server" toggle is active on port 1234.</li>
+          </ul>
+
+          <h3>How do I reset a bot's memory if it gets stuck?</h3>
+          <p>
+            Inside the bot chat window, click the menu dots in the top right corner and select <strong>Clear Active Turn</strong> or <strong>New Thread</strong>. This resets the immediate context window while preserving the bot's base instructions.
+          </p>
+        </div>
+      </article>
+
+    </main>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-links-row">
+        <div class="footer-links">
+          <a href="index.html#downloads">Download</a>
+          <a href="docs.html">Documentation</a>
+          <a href="docs.html#bring-your-own-api">API Setup</a>
+          <a href="docs.html#computer-use">Computer Use</a>
+          <a href="docs.html#privacy-and-storage">Privacy & Data</a>
+          <a href="docs.html#faq">Troubleshooting</a>
+        </div>
+        <div class="footer-copy">
+          © 2026 Jerry Technologies. All rights reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/docs.js"></script>
+</body>
+</html>
