@@ -20,7 +20,7 @@ function initOsDetection() {
   const userAgent = window.navigator.userAgent.toLowerCase();
   const platform = window.navigator.platform?.toLowerCase() || "";
 
-  const GITHUB_RELEASE_BASE = "https://github.com/Aryan-KG/Jerry-Downloads/releases/download/Jerry0186";
+  const GITHUB_RELEASE_BASE = "https://github.com/Aryan-KG/Jerry-Downloads/releases/download/v0.1.86";
 
   if (/iphone|ipad|ipod/.test(userAgent)) {
     downloadLabel.textContent = "Download iOS (.IPA)";
